@@ -6401,7 +6401,6 @@ from GND to VDD.</description>
 <part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J4" library="SparkFun-Connectors" deviceset="CONN_08" device="LOCK"/>
-<part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF" device="-KIT-EZ-50V-20%" value="0.1uF"/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
@@ -6419,6 +6418,7 @@ from GND to VDD.</description>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A4L-LOC" device=""/>
 <part name="U$1" library="Group_04_Library" deviceset="TMUX1208" device=""/>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A4L-LOC" device=""/>
+<part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6585,9 +6585,6 @@ connectors</text>
 <attribute name="VALUE" x="370.84" y="86.614" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="370.84" y="112.268" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="SUPPLY8" gate="G$1" x="429.26" y="88.9" smashed="yes" rot="R270">
-<attribute name="VALUE" x="432.054" y="88.9" size="1.778" layer="96" rot="R270" align="bottom-center"/>
-</instance>
 <instance part="GND6" gate="1" x="424.18" y="78.74" smashed="yes">
 <attribute name="VALUE" x="424.18" y="78.486" size="1.778" layer="96" align="top-center"/>
 </instance>
@@ -6648,6 +6645,9 @@ connectors</text>
 <attribute name="DRAWING_NAME" x="494.03" y="25.4" size="2.54" layer="94"/>
 <attribute name="LAST_DATE_TIME" x="494.03" y="20.32" size="2.286" layer="94"/>
 <attribute name="SHEET" x="507.365" y="15.24" size="2.54" layer="94"/>
+</instance>
+<instance part="SUPPLY8" gate="G$1" x="449.58" y="88.9" smashed="yes">
+<attribute name="VALUE" x="449.58" y="91.694" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -6837,6 +6837,11 @@ connectors</text>
 <wire x1="429.26" y1="119.38" x2="421.64" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="429.26" y1="124.46" x2="429.26" y2="119.38" width="0.1524" layer="91"/>
 <junction x="429.26" y="119.38"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="EN"/>
+<pinref part="SUPPLY8" gate="G$1" pin="5V"/>
+<wire x1="421.64" y1="88.9" x2="449.58" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MUX_OUT/1.4C" class="0">
@@ -7210,13 +7215,6 @@ connectors</text>
 <wire x1="205.74" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SD3"/>
 <label x="208.28" y="144.78" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="SUPPLY8" gate="G$1" pin="5V"/>
-<wire x1="421.64" y1="88.9" x2="429.26" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="EN"/>
 </segment>
 </net>
 </nets>
